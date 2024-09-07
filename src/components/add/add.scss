@@ -1,0 +1,104 @@
+@import "../../styles/variables.scss";
+
+.add {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.724);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modal {
+    padding: 50px;
+    border-radius: 10px;
+    background-color: $main-bg;
+    position: relative;
+
+    h1 {
+      margin-bottom: 40px;
+      font-size: 28px;
+      font-weight: bold;
+      color: $soft-color;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      color: $soft-color;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 500px;
+      justify-content: space-between;
+
+      .item {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+
+        label {
+          font-size: 16px;
+          font-weight: bold;
+          color: $soft-color;
+        }
+
+        input, select {
+          padding: 12px;
+          font-size: 16px;
+          background-color: #1a1a1a; /* Background color for select and input */
+          color: #ffffff; /* Text color */
+          outline: none;
+          border: 1px solid $soft-color;
+          border-radius: 3px;
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23ccc" d="M2 0L0 2h4z"/></svg>');
+          background-repeat: no-repeat;
+          background-position: right 10px top 50%;
+          background-size: 10px 10px;
+        }
+
+        select option {
+          background-color: #1a1a1a;  /* Background color for dropdown options */
+          color: #ffffff; /* Text color for dropdown options */
+        }
+
+        select:hover, input:hover {
+          border-color: lighten($soft-color, 10%);
+        }
+
+        select:focus, input:focus {
+          border-color: lighten($soft-color, 20%);
+        }
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: $soft-color;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken($soft-color, 10%);
+        }
+      }
+    }
+  }
+}
